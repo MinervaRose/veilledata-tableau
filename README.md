@@ -34,7 +34,7 @@ Tableau Public
 
 Le dépôt GitHub contient le **code, la documentation et les captures d’écran**.  
 Le Google Sheet vivant reste dans le Google Drive de la personne qui installe le projet.
-
+[Voir le dashboard Tableau Public](https://public.tableau.com/views/Veilletechnologiqueautomatise/Tableaudebord1?:language=fr-FR&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 ---
 
 ## Sommaire
@@ -735,6 +735,8 @@ Ne jamais publier :
 - de secrets industriels.
 
 Ce démonstrateur utilise uniquement des informations publiques issues de GitHub Releases.
+
+[Voir le dashboard Tableau Public](https://public.tableau.com/views/Veilletechnologiqueautomatise/Tableaudebord1?:language=fr-FR&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
 ---
 
