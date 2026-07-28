@@ -24,15 +24,15 @@ Le projet est conçu comme un exemple pédagogique de veille technologique autom
 
 Les principaux risques pris en compte sont :
 
-- l’accès excessif aux fichiers Google Drive ;
-- la récupération de contenus depuis une source non autorisée ;
-- les redirections vers un domaine inattendu ;
-- l’injection de formules dans Google Sheets ;
-- l’ajout de doublons ;
-- les exécutions concurrentes ;
-- les réponses trop volumineuses ;
-- les flux invalides ou malformés ;
-- la publication accidentelle d’informations privées dans Tableau Public ;
+- l’accès excessif aux fichiers Google Drive 
+- la récupération de contenus depuis une source non autorisée 
+- les redirections vers un domaine inattendu 
+- l’injection de formules dans Google Sheets 
+- l’ajout de doublons 
+- les exécutions concurrentes 
+- les réponses trop volumineuses 
+- les flux invalides ou malformés 
+- la publication accidentelle d’informations privées dans Tableau Public 
 - l’exposition de secrets dans GitHub.
 
 ---
@@ -77,9 +77,9 @@ Une URL absente de cette liste doit être rejetée.
 
 Cette mesure limite les risques de requêtes vers :
 
-- un domaine inconnu ;
-- une ressource interne ;
-- une URL malveillante ;
+- un domaine inconnu 
+- une ressource interne 
+- une URL malveillante 
 - une destination modifiée dans l’onglet `sources`.
 
 ---
@@ -124,16 +124,16 @@ Le script doit signaler une erreur si une source ne renvoie aucun élément expl
 
 Le script applique des limites pour éviter un traitement excessif :
 
-- nombre maximal de sources ;
-- nombre maximal d’éléments par source ;
-- taille maximale de la réponse HTTP ;
+- nombre maximal de sources 
+- nombre maximal d’éléments par source 
+- taille maximale de la réponse HTTP 
 - longueur maximale des champs textuels.
 
 Ces limites réduisent les risques de :
 
-- dépassement des quotas Apps Script ;
-- consommation excessive de mémoire ;
-- blocage du classeur ;
+- dépassement des quotas Apps Script 
+- consommation excessive de mémoire 
+- blocage du classeur 
 - import d’un contenu anormalement volumineux.
 
 ---
@@ -144,9 +144,9 @@ Les titres, résumés et autres contenus externes sont nettoyés avant leur écr
 
 Le script limite notamment :
 
-- les balises HTML ;
-- les espaces superflus ;
-- les textes trop longs ;
+- les balises HTML 
+- les espaces superflus 
+- les textes trop longs 
 - les valeurs susceptibles d’être interprétées comme une formule.
 
 ---
@@ -240,8 +240,8 @@ Ce verrou empêche deux exécutions de modifier simultanément le classeur, par 
 
 Sans verrou, deux exécutions parallèles pourraient :
 
-- créer des doublons ;
-- provoquer des écritures incohérentes ;
+- créer des doublons 
+- provoquer des écritures incohérentes 
 - produire un journal incorrect.
 
 ---
@@ -252,9 +252,9 @@ Les nouvelles lignes sont écrites en une seule opération par lot lorsque cela 
 
 Cette méthode :
 
-- réduit le nombre d’appels à Google Sheets ;
-- diminue le risque d’écriture partielle ;
-- améliore les performances ;
+- réduit le nombre d’appels à Google Sheets 
+- diminue le risque d’écriture partielle 
+- améliore les performances 
 - limite les dépassements de quotas.
 
 ---
@@ -292,9 +292,9 @@ message
 
 Le journal permet de vérifier :
 
-- que le déclencheur fonctionne ;
-- qu’aucun doublon n’est ajouté ;
-- qu’une source a échoué ;
+- que le déclencheur fonctionne 
+- qu’aucun doublon n’est ajouté 
+- qu’une source a échoué 
 - que le nombre d’éléments collectés reste cohérent.
 
 Le journal ne doit pas contenir de secret, jeton, mot de passe ou donnée personnelle.
@@ -307,11 +307,11 @@ Le projet ne nécessite pas de clé API.
 
 Aucun secret ne doit être stocké dans :
 
-- `Code.gs` ;
-- `appsscript.json` ;
-- Google Sheets ;
-- le dépôt GitHub ;
-- les captures d’écran ;
+- `Code.gs` 
+- `appsscript.json` 
+- Google Sheets 
+- le dépôt GitHub 
+- les captures d’écran 
 - Tableau Public.
 
 Si une version future utilise une clé API, elle devra être stockée dans un mécanisme approprié, par exemple les propriétés du script, et ne jamais être commitée dans GitHub.
@@ -326,11 +326,11 @@ Il doit rester dans Google Drive.
 
 Recommandations :
 
-- ne pas partager le classeur publiquement ;
-- limiter les droits d’édition ;
-- protéger les colonnes automatiques ;
-- vérifier régulièrement l’onglet `run_log` ;
-- ne pas y ajouter de données confidentielles ;
+- ne pas partager le classeur publiquement 
+- limiter les droits d’édition 
+- protéger les colonnes automatiques 
+- vérifier régulièrement l’onglet `run_log` 
+- ne pas y ajouter de données confidentielles 
 - ne pas rendre le lien accessible à toute personne disposant de l’URL.
 
 Le dépôt GitHub contient uniquement le code, la documentation et des exemples anonymes. Il ne contient pas le classeur vivant.
@@ -345,13 +345,13 @@ Le classeur publié, les visualisations et l’extrait de données associé peuv
 
 Avant chaque publication, vérifier que la source ne contient pas :
 
-- de donnée personnelle ;
-- d’adresse électronique ;
-- de token ;
-- de clé API ;
-- de chemin local ;
-- de nom confidentiel ;
-- d’information interne ;
+- de donnée personnelle 
+- d’adresse électronique 
+- de token 
+- de clé API 
+- de chemin local 
+- de nom confidentiel 
+- d’information interne 
 - de contenu protégé ou non destiné à être diffusé.
 
 Dans ce projet, seules des informations publiques issues de GitHub Releases sont publiées.
@@ -391,10 +391,10 @@ samples/
 
 Les captures doivent être vérifiées avant publication afin d’éviter d’afficher :
 
-- l’adresse du compte Google ;
-- des noms de fichiers privés ;
-- des onglets confidentiels ;
-- des informations présentes dans la barre du navigateur ;
+- l’adresse du compte Google 
+- des noms de fichiers privés 
+- des onglets confidentiels 
+- des informations présentes dans la barre du navigateur 
 - des identifiants techniques inutiles.
 
 ---
@@ -403,17 +403,17 @@ Les captures doivent être vérifiées avant publication afin d’éviter d’af
 
 Le démonstrateur dépend :
 
-- de Google Apps Script ;
-- de Google Sheets ;
-- de Tableau Public ;
+- de Google Apps Script 
+- de Google Sheets 
+- de Tableau Public 
 - des flux GitHub Releases des projets suivis.
 
 Une source peut :
 
-- changer d’URL ;
-- modifier son format ;
-- devenir temporairement indisponible ;
-- supprimer d’anciennes releases ;
+- changer d’URL 
+- modifier son format 
+- devenir temporairement indisponible 
+- supprimer d’anciennes releases 
 - publier un contenu inattendu.
 
 Le projet ne garantit donc pas une disponibilité continue.
@@ -428,23 +428,23 @@ Les mesures décrites réduisent les risques, mais ne constituent pas un audit d
 
 Le projet ne comprend pas :
 
-- d’authentification personnalisée ;
-- de chiffrement applicatif ;
-- de gestion de rôles avancée ;
-- de surveillance en temps réel ;
-- de système de sauvegarde automatisé ;
-- de validation humaine de chaque contenu avant collecte ;
+- d’authentification personnalisée 
+- de chiffrement applicatif 
+- de gestion de rôles avancée 
+- de surveillance en temps réel 
+- de système de sauvegarde automatisé 
+- de validation humaine de chaque contenu avant collecte 
 - de garantie contre une compromission d’une source externe.
 
 Le démonstrateur est adapté à une veille sur des données publiques à faible sensibilité.
 
 Il ne doit pas être utilisé tel quel pour :
 
-- des données médicales ;
-- des données financières confidentielles ;
-- des données RH ;
-- des données clients ;
-- des secrets industriels ;
+- des données médicales 
+- des données financières confidentielles 
+- des données RH 
+- des données clients 
+- des secrets industriels 
 - des informations soumises à des obligations réglementaires particulières.
 
 ---
@@ -494,15 +494,15 @@ Il ne doit pas être utilisé tel quel pour :
 
 En cas de comportement inattendu :
 
-1. désactiver le déclencheur Apps Script ;
-2. vérifier la dernière ligne de `run_log` ;
-3. identifier la source concernée ;
-4. désactiver cette source dans l’onglet `sources` ;
-5. vérifier les nouvelles lignes ajoutées dans `items` ;
-6. supprimer uniquement les lignes incorrectes après sauvegarde ;
-7. corriger le code ou l’URL autorisée ;
-8. relancer manuellement `runWatch` ;
-9. vérifier qu’aucun doublon ou contenu dangereux n’a été ajouté ;
+1. désactiver le déclencheur Apps Script 
+2. vérifier la dernière ligne de `run_log` 
+3. identifier la source concernée 
+4. désactiver cette source dans l’onglet `sources` 
+5. vérifier les nouvelles lignes ajoutées dans `items` 
+6. supprimer uniquement les lignes incorrectes après sauvegarde 
+7. corriger le code ou l’URL autorisée 
+8. relancer manuellement `runWatch` 
+9. vérifier qu’aucun doublon ou contenu dangereux n’a été ajouté 
 10. republier Tableau Public uniquement si les données publiques ont changé.
 
 Si un secret a été publié accidentellement, le supprimer du dépôt ou du dashboard ne suffit pas. Il doit également être révoqué et remplacé.
