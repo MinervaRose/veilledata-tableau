@@ -12,12 +12,12 @@ Ce dépôt présente un **démonstrateur pédagogique de veille technologique au
 
 Il montre comment :
 
-1. suivre plusieurs sources techniques publiques ;
-2. récupérer automatiquement leurs nouvelles publications ;
-3. stocker les résultats dans Google Sheets ;
-4. éviter les doublons ;
-5. conserver une étape de revue humaine ;
-6. visualiser la veille dans Tableau Public ;
+1. suivre plusieurs sources techniques publiques 
+2. récupérer automatiquement leurs nouvelles publications 
+3. stocker les résultats dans Google Sheets 
+4. éviter les doublons 
+5. conserver une étape de revue humaine 
+6. visualiser la veille dans Tableau Public 
 7. documenter les choix techniques, les risques et les limites.
 
 Le projet repose sur quatre éléments complémentaires :
@@ -70,39 +70,39 @@ Le Google Sheet vivant reste dans le Google Drive de la personne qui installe le
 
 Une veille technologique consiste à suivre régulièrement des sources afin de repérer :
 
-- de nouvelles versions d’outils ;
-- des changements importants ;
-- des fonctionnalités à tester ;
-- des risques de compatibilité ;
-- des tendances utiles à un projet ;
+- de nouvelles versions d’outils 
+- des changements importants 
+- des fonctionnalités à tester 
+- des risques de compatibilité 
+- des tendances utiles à un projet 
 - des informations qui peuvent modifier une décision technique.
 
 Dans ce démonstrateur, trois flux GitHub Releases sont suivis :
 
-- **Pandera**, pour la validation de données ;
-- **Great Expectations**, pour la qualité des données ;
+- **Pandera**, pour la validation de données 
+- **Great Expectations**, pour la qualité des données 
 - **scikit-learn**, pour le machine learning et la détection d’anomalies.
 
 À chaque exécution, le script :
 
-1. lit la liste des sources actives ;
-2. récupère leur flux Atom ;
-3. extrait les publications récentes ;
-4. normalise les champs ;
-5. calcule un identifiant stable ;
-6. vérifie si la publication existe déjà ;
-7. ajoute uniquement les nouveaux éléments ;
+1. lit la liste des sources actives 
+2. récupère leur flux Atom 
+3. extrait les publications récentes 
+4. normalise les champs 
+5. calcule un identifiant stable 
+6. vérifie si la publication existe déjà 
+7. ajoute uniquement les nouveaux éléments 
 8. enregistre le résultat dans un journal d’exécution.
 
 Les publications sont ensuite affichées dans un dashboard Tableau comprenant notamment :
 
-- le nombre de publications collectées ;
-- le nombre de sources suivies ;
-- le nombre d’éléments revus ;
-- la date de dernière collecte ;
-- une chronologie des publications ;
-- une répartition par source ;
-- une répartition par statut de revue ;
+- le nombre de publications collectées 
+- le nombre de sources suivies 
+- le nombre d’éléments revus 
+- la date de dernière collecte 
+- une chronologie des publications 
+- une répartition par source 
+- une répartition par statut de revue 
 - les publications les plus récentes.
 
 ![Dashboard Tableau Public](screenshots/tableau-dashboard.png)
@@ -113,11 +113,11 @@ Les publications sont ensuite affichées dans un dashboard Tableau comprenant no
 
 Cette architecture a été choisie pour être :
 
-- **compréhensible**, car chaque outil a une fonction claire ;
-- **accessible**, car elle ne nécessite pas de serveur personnel ;
-- **démontrable**, car les résultats sont visibles dans Google Sheets et Tableau ;
-- **automatisable**, grâce aux déclencheurs Apps Script ;
-- **réutilisable**, car le code et la documentation peuvent être adaptés à d’autres sujets ;
+- **compréhensible**, car chaque outil a une fonction claire 
+- **accessible**, car elle ne nécessite pas de serveur personnel 
+- **démontrable**, car les résultats sont visibles dans Google Sheets et Tableau 
+- **automatisable**, grâce aux déclencheurs Apps Script 
+- **réutilisable**, car le code et la documentation peuvent être adaptés à d’autres sujets 
 - **honnête**, car elle distingue la collecte automatique du jugement humain.
 
 ## Rôle de chaque outil
@@ -137,9 +137,9 @@ Le Google Sheet **ne doit pas être déplacé dans GitHub**.
 
 Il reste dans Google Drive, car :
 
-- Apps Script est rattaché au classeur ;
-- le déclencheur quotidien met ce classeur à jour ;
-- Tableau utilise ce classeur comme source de données ;
+- Apps Script est rattaché au classeur 
+- le déclencheur quotidien met ce classeur à jour 
+- Tableau utilise ce classeur comme source de données 
 - GitHub ne remplace pas une base de données opérationnelle.
 
 GitHub contient une copie du code et la documentation nécessaire pour reproduire l’installation.
@@ -154,25 +154,25 @@ Le système automatise les tâches répétitives, mais il ne prétend pas rempla
 
 ## Tâches automatisées
 
-- lecture des flux ;
-- récupération des publications ;
-- validation des URLs ;
-- parsing du XML Atom ;
-- nettoyage des textes ;
-- création des identifiants ;
-- déduplication ;
-- ajout dans Google Sheets ;
-- journalisation ;
-- exécution quotidienne ;
+- lecture des flux 
+- récupération des publications 
+- validation des URLs 
+- parsing du XML Atom 
+- nettoyage des textes 
+- création des identifiants 
+- déduplication 
+- ajout dans Google Sheets 
+- journalisation 
+- exécution quotidienne 
 - alimentation du dashboard.
 
 ## Tâches humaines
 
-- décider si une publication mérite d’être lue ;
-- évaluer sa pertinence ;
-- décider si elle doit être testée ;
-- expliquer son impact potentiel sur un projet ;
-- vérifier que la publication a été relue ;
+- décider si une publication mérite d’être lue 
+- évaluer sa pertinence 
+- décider si elle doit être testée 
+- expliquer son impact potentiel sur un projet 
+- vérifier que la publication a été relue 
 - formuler une conclusion professionnelle.
 
 Les champs humains sont :
@@ -270,11 +270,11 @@ Cette séparation est volontaire. Une publication peut être collectée automati
 
 Pour reproduire ce démonstrateur, il faut :
 
-- un compte Google ;
-- Google Sheets ;
-- Google Apps Script ;
-- Tableau Desktop ou Tableau Public Edition ;
-- un compte Tableau Public ;
+- un compte Google 
+- Google Sheets 
+- Google Apps Script 
+- Tableau Desktop ou Tableau Public Edition 
+- un compte Tableau Public 
 - un compte GitHub pour documenter le projet.
 
 Aucune clé API n’est nécessaire.
@@ -407,23 +407,23 @@ La deuxième ligne prouve que la déduplication fonctionne.
 
 Depuis le Google Sheet :
 
-1. ouvrir **Extensions** ;
-2. choisir **Apps Script** ;
-3. renommer le projet, par exemple `VeilleData Collector` ;
-4. ouvrir le fichier `Code.gs` ;
-5. remplacer son contenu par celui de [`apps-script/Code.gs`](apps-script/Code.gs) ;
-6. ouvrir les paramètres du projet ;
-7. activer l’affichage du fichier manifeste ;
-8. ouvrir `appsscript.json` ;
-9. remplacer son contenu par celui de [`apps-script/appsscript.json`](apps-script/appsscript.json) ;
+1. ouvrir **Extensions** 
+2. choisir **Apps Script** 
+3. renommer le projet, par exemple `VeilleData Collector` 
+4. ouvrir le fichier `Code.gs` 
+5. remplacer son contenu par celui de [`apps-script/Code.gs`](apps-script/Code.gs) 
+6. ouvrir les paramètres du projet 
+7. activer l’affichage du fichier manifeste 
+8. ouvrir `appsscript.json` 
+9. remplacer son contenu par celui de [`apps-script/appsscript.json`](apps-script/appsscript.json) 
 10. enregistrer le projet.
 
 ## Pourquoi copier aussi `appsscript.json` ?
 
 Le manifeste permet de déclarer explicitement :
 
-- les permissions OAuth ;
-- les domaines externes autorisés ;
+- les permissions OAuth 
+- les domaines externes autorisés 
 - les paramètres techniques du projet.
 
 Cela évite de laisser Apps Script demander des permissions plus larges que nécessaire.
@@ -446,13 +446,13 @@ Cette annotation indique que le script doit limiter son accès au classeur coura
 
 Dans Apps Script :
 
-1. sélectionner la fonction `runWatch` ;
-2. cliquer sur **Exécuter** ;
-3. accepter les autorisations demandées ;
-4. revenir au Google Sheet ;
-5. ouvrir l’onglet `items` ;
-6. vérifier que des lignes ont été ajoutées ;
-7. ouvrir `run_log` ;
+1. sélectionner la fonction `runWatch` 
+2. cliquer sur **Exécuter** 
+3. accepter les autorisations demandées 
+4. revenir au Google Sheet 
+5. ouvrir l’onglet `items` 
+6. vérifier que des lignes ont été ajoutées 
+7. ouvrir `run_log` 
 8. vérifier qu’une ligne `SUCCESS` est présente.
 
 Lors de la première exécution, le résultat attendu est proche de :
@@ -481,13 +481,13 @@ Il faut créer un déclencheur temporel.
 
 Dans Apps Script :
 
-1. cliquer sur l’icône **Déclencheurs** dans la barre latérale ;
-2. cliquer sur **Ajouter un déclencheur** ;
-3. sélectionner la fonction `runWatch` ;
-4. choisir la version `Head` ;
-5. choisir comme source de l’événement **Basé sur le temps** ;
-6. choisir **Minuteur journalier** ;
-7. sélectionner une plage horaire, par exemple `08:00 à 09:00` ;
+1. cliquer sur l’icône **Déclencheurs** dans la barre latérale 
+2. cliquer sur **Ajouter un déclencheur** 
+3. sélectionner la fonction `runWatch` 
+4. choisir la version `Head` 
+5. choisir comme source de l’événement **Basé sur le temps** 
+6. choisir **Minuteur journalier** 
+7. sélectionner une plage horaire, par exemple `08:00 à 09:00` 
 8. enregistrer.
 
 Google choisit l’heure exacte à l’intérieur de la plage indiquée. Le script ne s’exécute donc pas nécessairement à la minute précise.
@@ -500,7 +500,7 @@ Avant de créer le déclencheur quotidien définitif, il est possible de créer 
 
 Après avoir confirmé qu’une nouvelle ligne apparaît automatiquement dans `run_log` :
 
-1. supprimer le déclencheur de test ;
+1. supprimer le déclencheur de test 
 2. créer le déclencheur journalier définitif.
 
 Ne pas conserver inutilement un déclencheur fréquent, car il consommerait davantage de quotas Apps Script.
@@ -558,11 +558,11 @@ Un titre de release ne suffit pas pour conclure qu’une mise à jour est utile.
 
 L’analyse doit tenir compte :
 
-- du projet concerné ;
-- du niveau de maturité de la fonctionnalité ;
-- de la compatibilité ;
-- du coût de migration ;
-- des risques ;
+- du projet concerné 
+- du niveau de maturité de la fonctionnalité 
+- de la compatibilité 
+- du coût de migration 
+- des risques 
 - du bénéfice réel.
 
 Le système collecte. La personne interprète.
@@ -575,19 +575,19 @@ Le système collecte. La personne interprète.
 
 Vérifier que :
 
-- le Google Sheet contient les données attendues ;
-- les colonnes automatiques sont correctement typées ;
-- aucun secret ou document privé ne sera exposé ;
+- le Google Sheet contient les données attendues 
+- les colonnes automatiques sont correctement typées 
+- aucun secret ou document privé ne sera exposé 
 - le compte Google utilisé pour Tableau est approprié.
 
 ## 12.2 Dans Tableau Desktop
 
-1. ouvrir Tableau ;
-2. choisir **Se connecter à des données** ;
-3. sélectionner **Google Drive** ;
-4. se connecter avec le compte Google prévu ;
-5. sélectionner le classeur `VeilleData Tableau` ;
-6. utiliser principalement l’onglet `items` ;
+1. ouvrir Tableau 
+2. choisir **Se connecter à des données** 
+3. sélectionner **Google Drive** 
+4. se connecter avec le compte Google prévu 
+5. sélectionner le classeur `VeilleData Tableau` 
+6. utiliser principalement l’onglet `items` 
 7. vérifier les types de données.
 
 Types recommandés :
@@ -614,16 +614,16 @@ Le dashboard de démonstration comprend :
 
 ## KPI
 
-- nombre total de publications ;
-- nombre distinct de sources ;
-- nombre d’éléments revus ;
+- nombre total de publications 
+- nombre distinct de sources 
+- nombre d’éléments revus 
 - dernière collecte.
 
 ## Visualisations
 
-- publications par mois et par source ;
-- publications par source ;
-- répartition par statut de revue ;
+- publications par mois et par source 
+- publications par source 
+- répartition par statut de revue 
 - cinq publications les plus récentes.
 
 ## Champs calculés utiles
@@ -691,8 +691,8 @@ Les graphiques peuvent être utilisés comme filtres du dashboard.
 
 Par exemple, cliquer sur `Pandera` peut filtrer :
 
-- la chronologie ;
-- les statuts ;
+- la chronologie 
+- les statuts 
 - les publications récentes.
 
 Une action URL peut également ouvrir la release d’origine stockée dans le champ `url`. Cette action ouvre la publication source sur GitHub. Elle n’ouvre pas le dépôt de ce démonstrateur.
@@ -703,14 +703,14 @@ Une action URL peut également ouvrir la release d’origine stockée dans le ch
 
 Dans Tableau Desktop :
 
-1. ouvrir le menu **Serveur** ;
-2. choisir **Tableau Public** ;
-3. sélectionner **Enregistrer sur Tableau Public** ;
-4. se connecter ;
-5. donner un nom au classeur ;
-6. publier ;
-7. ouvrir le dashboard dans le navigateur ;
-8. vérifier la mise en page et les filtres ;
+1. ouvrir le menu **Serveur** 
+2. choisir **Tableau Public** 
+3. sélectionner **Enregistrer sur Tableau Public** 
+4. se connecter 
+5. donner un nom au classeur 
+6. publier 
+7. ouvrir le dashboard dans le navigateur 
+8. vérifier la mise en page et les filtres 
 9. conserver l’URL publique.
 
 Exemple de titre :
@@ -727,13 +727,13 @@ Le classeur publié et les données de l’extrait peuvent être accessibles à 
 
 Ne jamais publier :
 
-- de données personnelles ;
-- d’adresses électroniques privées ;
-- de clés API ;
-- de tokens ;
-- de documents confidentiels ;
-- de données clients ;
-- de données RH ;
+- de données personnelles 
+- d’adresses électroniques privées 
+- de clés API 
+- de tokens 
+- de documents confidentiels 
+- de données clients 
+- de données RH 
 - de secrets industriels.
 
 Ce démonstrateur utilise uniquement des informations publiques issues de GitHub Releases.
@@ -818,9 +818,9 @@ Le nombre de sources, le nombre d’éléments et la taille des réponses sont l
 
 Ces limites protègent :
 
-- la mémoire ;
-- les quotas Apps Script ;
-- la stabilité du Sheet ;
+- la mémoire 
+- les quotas Apps Script 
+- la stabilité du Sheet 
 - le temps d’exécution.
 
 ---
@@ -872,8 +872,8 @@ Les nouvelles lignes sont ajoutées en groupe.
 
 Cette méthode réduit :
 
-- les appels au service Google Sheets ;
-- le risque d’écriture partielle ;
+- les appels au service Google Sheets 
+- le risque d’écriture partielle 
 - les problèmes de performance.
 
 ---
@@ -896,9 +896,9 @@ Chaque exécution est enregistrée dans `run_log`.
 
 Sans journal, il serait difficile de savoir :
 
-- si le déclencheur a fonctionné ;
-- si une source a échoué ;
-- si des doublons ont été ajoutés ;
+- si le déclencheur a fonctionné 
+- si une source a échoué 
+- si des doublons ont été ajoutés 
 - quand la dernière collecte a eu lieu.
 
 Pour plus de détails, consulter [`docs/SECURITY.md`](docs/SECURITY.md).
@@ -946,10 +946,10 @@ sont toujours présentes.
 
 Vérifier que :
 
-- le dashboard s’ouvre ;
-- les KPI sont cohérents ;
-- les filtres fonctionnent ;
-- les cinq publications récentes sont visibles ;
+- le dashboard s’ouvre 
+- les KPI sont cohérents 
+- les filtres fonctionnent 
+- les cinq publications récentes sont visibles 
 - aucune information privée n’est affichée.
 
 ---
@@ -962,24 +962,24 @@ La licence MIT autorise la réutilisation du code sous certaines conditions. Ell
 
 ## Ce qu’un apprenant peut faire
 
-- étudier l’architecture ;
-- comprendre les choix ;
-- réutiliser certaines fonctions ;
-- adapter le script ;
-- choisir d’autres sources ;
-- modifier le modèle de données ;
-- créer ses propres indicateurs ;
-- construire un autre dashboard ;
-- documenter ses décisions ;
+- étudier l’architecture 
+- comprendre les choix 
+- réutiliser certaines fonctions 
+- adapter le script 
+- choisir d’autres sources 
+- modifier le modèle de données 
+- créer ses propres indicateurs 
+- construire un autre dashboard 
+- documenter ses décisions 
 - citer ce dépôt parmi ses ressources.
 
 ## Ce qu’un apprenant ne doit pas faire
 
-- recopier le dépôt sans le comprendre ;
-- conserver exactement les mêmes sources et les mêmes visuels sans justification ;
-- présenter le code comme entièrement original ;
-- masquer l’utilisation d’un modèle existant ;
-- modifier uniquement les couleurs et considérer le projet comme personnel ;
+- recopier le dépôt sans le comprendre 
+- conserver exactement les mêmes sources et les mêmes visuels sans justification 
+- présenter le code comme entièrement original 
+- masquer l’utilisation d’un modèle existant 
+- modifier uniquement les couleurs et considérer le projet comme personnel 
 - reprendre les conclusions sans mener sa propre analyse.
 
 ## Comment personnaliser réellement le projet
@@ -1007,65 +1007,65 @@ Le même principe peut être adapté à de nombreux sujets.
 
 ## Data et intelligence artificielle
 
-- nouvelles versions de bibliothèques Python ;
-- outils de qualité des données ;
-- modèles open source ;
-- observabilité des systèmes de machine learning ;
-- IA responsable et gouvernance ;
-- bases vectorielles ;
-- outils de visualisation ;
+- nouvelles versions de bibliothèques Python 
+- outils de qualité des données 
+- modèles open source 
+- observabilité des systèmes de machine learning 
+- IA responsable et gouvernance 
+- bases vectorielles 
+- outils de visualisation 
 - MLOps.
 
 ## Cybersécurité
 
-- bulletins de vulnérabilités ;
-- mises à jour de sécurité ;
-- publications de la CISA ;
-- avis des éditeurs ;
+- bulletins de vulnérabilités 
+- mises à jour de sécurité 
+- publications de la CISA 
+- avis des éditeurs 
 - nouvelles CVE concernant une pile logicielle précise.
 
 ## Accessibilité numérique
 
-- évolutions des WCAG ;
-- outils de test ;
-- mises à jour des navigateurs ;
-- publications de référence ;
+- évolutions des WCAG 
+- outils de test 
+- mises à jour des navigateurs 
+- publications de référence 
 - jurisprudence ou réglementation.
 
 ## Développement web
 
-- versions de frameworks ;
-- changements de compatibilité ;
-- dépréciations ;
-- outils de test ;
+- versions de frameworks 
+- changements de compatibilité 
+- dépréciations 
+- outils de test 
 - nouvelles fonctionnalités des navigateurs.
 
 ## Environnement
 
-- données publiques sur les incendies ;
-- qualité de l’air ;
-- sécheresse ;
-- biodiversité ;
-- énergie ;
+- données publiques sur les incendies 
+- qualité de l’air 
+- sécheresse 
+- biodiversité 
+- énergie 
 - publications scientifiques ciblées.
 
 ## Secteur professionnel
 
-- réglementation d’un métier ;
-- appels à projets ;
-- nouveaux outils ;
-- tendances de recrutement ;
-- publications d’organismes de référence ;
+- réglementation d’un métier 
+- appels à projets 
+- nouveaux outils 
+- tendances de recrutement 
+- publications d’organismes de référence 
 - évolutions de normes.
 
 ## Règle de choix
 
 Choisir un sujet :
 
-- suffisamment précis pour rester gérable ;
-- suffisamment utile pour soutenir une décision ;
-- alimenté par des sources accessibles ;
-- compatible avec le temps disponible ;
+- suffisamment précis pour rester gérable 
+- suffisamment utile pour soutenir une décision 
+- alimenté par des sources accessibles 
+- compatible avec le temps disponible 
 - sans données sensibles inutiles.
 
 ---
@@ -1076,21 +1076,21 @@ Ce projet reste volontairement simple.
 
 Il ne comprend pas :
 
-- de serveur dédié ;
-- de base de données relationnelle ;
-- d’authentification personnalisée ;
-- de file de messages ;
-- de surveillance en temps réel ;
-- de classification automatique par modèle de langage ;
-- de validation humaine avant insertion ;
-- de garantie de disponibilité des sources ;
+- de serveur dédié 
+- de base de données relationnelle 
+- d’authentification personnalisée 
+- de file de messages 
+- de surveillance en temps réel 
+- de classification automatique par modèle de langage 
+- de validation humaine avant insertion 
+- de garantie de disponibilité des sources 
 - de sauvegarde automatisée avancée.
 
 Les flux GitHub peuvent :
 
-- changer d’adresse ;
-- modifier leur format ;
-- devenir indisponibles ;
+- changer d’adresse 
+- modifier leur format 
+- devenir indisponibles 
 - publier un contenu inattendu.
 
 Tableau Public peut actualiser les données selon son propre calendrier. Le déclencheur Apps Script met à jour Google Sheets, mais cela ne garantit pas une actualisation immédiate du dashboard public.
@@ -1141,9 +1141,9 @@ https://github.com/fivetran/great_expectations/releases.atom
 
 Vérifier :
 
-- que `item_id` est bien calculé ;
-- que les identifiants existants sont lus avant l’écriture ;
-- que le verrou est actif ;
+- que `item_id` est bien calculé 
+- que les identifiants existants sont lus avant l’écriture 
+- que le verrou est actif 
 - que les deux exécutions ne démarrent pas simultanément.
 
 ---
@@ -1160,10 +1160,10 @@ Il doit uniquement ajouter de nouvelles lignes aux colonnes automatiques, sans r
 
 Vérifier successivement :
 
-1. que Google Sheets a bien été mis à jour ;
-2. que `run_log` contient une exécution récente ;
-3. que la source Tableau pointe vers le bon classeur ;
-4. que l’extrait Tableau a été actualisé ;
+1. que Google Sheets a bien été mis à jour 
+2. que `run_log` contient une exécution récente 
+3. que la source Tableau pointe vers le bon classeur 
+4. que l’extrait Tableau a été actualisé 
 5. que les filtres du dashboard ne masquent pas les nouvelles lignes.
 
 ---
@@ -1178,9 +1178,9 @@ Si un secret a été exposé, le supprimer du dashboard ne suffit pas. Il doit �
 
 # 21. Documentation complémentaire
 
-- [`docs/DATA_DICTIONARY.md`](docs/DATA_DICTIONARY.md) : description complète des champs ;
-- [`docs/SECURITY.md`](docs/SECURITY.md) : mesures de sécurité et checklist ;
-- [`apps-script/Code.gs`](apps-script/Code.gs) : collecteur ;
+- [`docs/DATA_DICTIONARY.md`](docs/DATA_DICTIONARY.md) : description complète des champs 
+- [`docs/SECURITY.md`](docs/SECURITY.md) : mesures de sécurité et checklist 
+- [`apps-script/Code.gs`](apps-script/Code.gs) : collecteur 
 - [`apps-script/appsscript.json`](apps-script/appsscript.json) : manifeste et permissions.
 
 ---
@@ -1195,10 +1195,10 @@ Consulter le fichier [`LICENSE`](LICENSE).
 
 La possibilité légale de réutiliser le code ne dispense pas de :
 
-- citer ses sources ;
-- expliquer ses adaptations ;
-- respecter les consignes d’un établissement ;
-- distinguer le travail personnel du travail repris ;
+- citer ses sources 
+- expliquer ses adaptations 
+- respecter les consignes d’un établissement 
+- distinguer le travail personnel du travail repris 
 - respecter l’intégrité académique et professionnelle.
 
 ---
@@ -1215,10 +1215,10 @@ Sa valeur ne réside pas uniquement dans le dashboard final.
 
 Elle réside aussi dans la capacité à expliquer :
 
-- pourquoi les sources ont été choisies ;
-- comment l’automatisation fonctionne ;
-- comment les doublons sont évités ;
-- pourquoi certaines décisions restent humaines ;
-- quels risques ont été identifiés ;
-- quelles protections ont été ajoutées ;
+- pourquoi les sources ont été choisies 
+- comment l’automatisation fonctionne 
+- comment les doublons sont évités 
+- pourquoi certaines décisions restent humaines 
+- quels risques ont été identifiés 
+- quelles protections ont été ajoutées 
 - comment le projet pourrait être adapté à un autre besoin.
